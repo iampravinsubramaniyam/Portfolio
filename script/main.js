@@ -36,6 +36,16 @@ const initApp = ()=>{
         lastScrollTop= currentScrollTop;
     });
 
+    window.addEventListener("scroll",()=>{
+        if(window.scrollY === 0){
+            showItems();
+        }else{
+            hideItems();
+        }
+
+        console.log(Math.floor(window.scrollY));
+    })
+
     const menuIcon = document.querySelector(".showMenu");
 
     menuIcon.addEventListener("click",()=>{
@@ -54,6 +64,7 @@ const initApp = ()=>{
         menuIcon.style.display = "flex";
     });
 
+
 }
 
 
@@ -64,10 +75,29 @@ const showItems = ()=>{
     const logo = document.querySelector(".logo");
     const menuList = document.querySelectorAll(".header .menuItems li a");
     linkBar.style.right = "0";
+    linkBar.style.opacity = "0.4";
     cloud.style.right= "1rem";
+    cloud.style.opacity="1";
     boat.style.left = "3rem";
     logo.style.opacity = "1";
     logo.style.letterSpacing = "0.3em";
+    
+    showMenuList(menuList)
+}
+
+const hideItems= ()=>{
+    const linkBar = document.querySelector(".linkBar");
+    const cloud = document.querySelector(".cloud");
+    const boat = document.querySelector(".boat");
+    const logo = document.querySelector(".logo");
+    const menuList = document.querySelectorAll(".header .menuItems li a");
+    linkBar.style.right = "70rem";
+    linkBar.style.opacity = "0";
+    cloud.style.right= "70rem";
+    cloud.style.opacity = "0";
+    boat.style.left = "0rem";
+    logo.style.opacity = "0";
+    logo.style.letterSpacing = "0";
     
     showMenuList(menuList)
 }
@@ -77,6 +107,7 @@ const showMenuList = (menuList) =>{
         menuList[point].style.transform = "rotateX(0deg)";
     }
 }
+
 
 
 

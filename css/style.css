@@ -47,11 +47,15 @@ html{
 }
 
 .dull{
-    opacity: 0.4;
+    opacity: 0.5;
     font-weight: 800;
-    font-size: 1em;
+    font-size: 0.8em;
 }
 
+
+.pink{
+    color: #f1889b;
+}
 
 
 /********Website starts********/
@@ -161,7 +165,7 @@ body{
     position: absolute;
     right: 20rem;
     top: 20%;
-    transition: 2s;
+    transition: 4s;
 }
 
 
@@ -280,20 +284,24 @@ body{
 
 .about{
     height: 100vh;
-    display:flex; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-flow: row wrap;
-    background-image: linear-gradient(var(--SEACOLOR),);
+    width: 100%;
+    background-color: var(--SEACOLOR);    
+    background-image: linear-gradient(var(--SEACOLOR),white);
+    position:relative;
 }
 
 
-.about .intro{
-    height: 200px;
-    width: 100px;
-    background-color: green;
+
+.about .anchor{
+    position: absolute;
+    width: 60PX;
+    height: 60px;
+    left:0;
+    top:90%;
+    opacity: 0.6;
+    transform: rotate(30deg);
 }
+
 
 
 
