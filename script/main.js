@@ -14,6 +14,14 @@ const initApp = ()=>{
         loop:true
     });
 
+    var typed = new Typed("#lastUpdated",{
+        strings:["@Last Updated 2024"],
+        typeSpeed:100,
+        backSpeed:100,
+        loop:false
+    });
+
+
     var lastScrollTop = 0;
     const navBar = document.querySelector(".header");
 

@@ -6,12 +6,17 @@ font-family: 'Style Script', cursive;
 
 
 */
+
+html{
+    scroll-behavior: smooth;
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
-    font-size: 1.2rem;
+    font-size: clamp(1rem,1.5vw,1.5rem);
     color: black;
 }
 
@@ -27,7 +32,29 @@ font-family: 'Style Script', cursive;
     --SANDCOLOR: #865326;
     --SEAGREEN: seagreen;
     --MENU_BG: #58c4e841;
+    --SEACOLOR: #78D7F1;
+    --ABOUT_TEXT_COLOR: #023631;
 }
+
+/*****  Span Styles  ************/
+
+
+.dark{
+    color: black;
+    opacity: 1;
+    font-size: 1em;
+    font-weight: 800;
+}
+
+.dull{
+    opacity: 0.4;
+    font-weight: 800;
+    font-size: 1em;
+}
+
+
+
+/********Website starts********/
 
 body{
     display: flex;
@@ -40,7 +67,7 @@ body{
 
 .header{
     width:100%;
-    height: 70px;
+    height: 100px;
     position: fixed;
     display: flex;
     justify-content: space-between;
@@ -50,7 +77,6 @@ body{
     z-index: 999;
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
-    box-shadow: 1px 1px 8px var(--BOX_SHADOW); 
     transition: 0.5s;
 }
 
@@ -100,13 +126,12 @@ body{
     display: block;
     padding: 1rem;   
     color: var(--GREY);
-    transition: 2s;
+    transition: 4s;
     transform: rotateX(90deg);
 }
 
 .header .menuItems li a:hover,.header .menuItems li a:focus{
     color: var(--LOGO_COLOR);
-    text-decoration: underline;
 }
 
 .showMenu{
@@ -115,39 +140,58 @@ body{
 }
 
 
-/*******************Main *****************/
+/*******************Front Page *****************/
 
-.main{
+.topSection{
     width: 100%;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 0;
 }
 
 .frontPage{
     width:100%;
-    min-height: 100vh;
-    
-}
+    height: 100vh;
+  }
 
-.main .cloud{
-    width: 40%;
+.topSection .cloud{
+    width: 30%;
     position: absolute;
     right: 20rem;
-    top: 2rem;
+    top: 20%;
     transition: 2s;
 }
 
 
-
-.main .boat{
-    width: 25%;
+.topSection .boat{
+    width: 20%;
     opacity: 0.5;
     position: absolute;
-    bottom: 3rem;
+    bottom: 5rem;
     left:0rem;
     z-index: 2;
     transition: 2s;
+    transform: rotate(-5deg);
 }
 
+.wheel{
+    position: absolute;
+    opacity: 0.4;
+    top: 20%;
+    left: 20%;
+    z-index:20;
+    animation:rotation 10s infinite linear;
+}
+
+@keyframes rotation{
+    from{
+        transform: rotate(0deg);
+    }to{
+        transform:rotate(360deg);
+    }
+}
 
 .linkBar{
     width: 30%;
@@ -156,13 +200,12 @@ body{
     bottom: 0;
     right: 100rem;
     z-index: 3;
-    opacity: 0.7;
+    opacity: 0.5;
     transition: 2s;
 }
 
 .sea{
     width: 100%;
-    height: 75%;
     position: absolute;
     bottom: 0;
     left:0;
@@ -172,24 +215,25 @@ body{
 
 .update{
     position: absolute;
-    bottom: 0;
-    left:0;
+    top: 28%;
+    left: 28%;
     z-index: 2;
     font-size: 16px;
     padding: 0 2em;
     color:var(--GREY);
+    height: 32px;
 }
 
 .container{
-    height: 40vh;
+    height: auto;
     min-width: 50vw;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: start;
     position: absolute;
-    top: 60%;
-    left: 30%;
+    top: 50%;
+    left: 25%;
     gap: 1rem;
 }
 
@@ -213,42 +257,54 @@ body{
     color: var(--LOGO_COLOR);
 }
 
-
-.insta:hover{
-    margin-bottom: 10px;
-    color: var(--BG_COLOR);
-    transition: 0.2s;
-}
-.linkin:hover{
-    margin-bottom: 10px;
-    color: var(--BG_COLOR);
-    transition: 0.2s;
+.gmail{
+    position: absolute;
+    right: 40px;
+    bottom: 24px;
+    z-index: 20;
+    opacity: 0.6;
+    font-size: 16px;
+    letter-spacing: 0.5px;
 }
 
-.leet:hover{
-    margin-bottom: 10px;
-    color: var(--BG_COLOR);
-    transition: 0.2s;
+
+
+/********************Main ***************/
+
+.main{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
 }
-
-.git:hover{
-    margin-bottom: 10px;
-    color: var(--BG_COLOR);
-    transition: 0.2s;
-}
-
-/********************About Section ***************/
-
 
 .about{
-    min-height: 100vh;
-    background-color: var(--LOGO_COLOR);
+    height: 100vh;
+    display:flex; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    background-image: linear-gradient(var(--SEACOLOR),);
 }
+
+
+.about .intro{
+    height: 200px;
+    width: 100px;
+    background-color: green;
+}
+
 
 
 /******** Mobile Screen**********/
 
 @media screen  and (max-width: 576px) { 
+    .frontPage{
+        width:100%;
+        height: 80vh;
+      }
+
     .showMenu{
         display: flex;
         width: 50px;
@@ -276,7 +332,7 @@ body{
     }
 
     .header .navBar .menuItems li a{
-        color: black;
+        color: var(--BLACK_COLOR);
     }
 
     .hideMenu{
@@ -297,7 +353,7 @@ body{
         letter-spacing: 0.2rem;
     }
 
-    .main .cloud{
+    .topSection .cloud{
         bottom: 0;
         left: 0;
         width: 60%;
@@ -310,7 +366,7 @@ body{
         height: 100px;
     }
 
-    .main .boat{
+    .topSection .boat{
         width: 50%;
         bottom: 3rem;
         left: 0rem;
@@ -319,33 +375,72 @@ body{
     .linkBar{
         width: 50%;
     }
-    
-
 }
 
 @media screen  and (max-width: 400px) {
+    .header{
+        height: 90px;
+    }
+
+    .topSection .frontPage{
+        margin-bottom: 0px;
+        overflow:hidden;
+    }
+
+    .header .navBar .showMenu{
+        opacity: 0.8;
+    }
+
+    .frontPage .sea{
+        width: 100%;
+        bottom: 60px;
+        height: 120px;
+    }
+
     .frontPage .cloud{
-        top:10%;
-        width: 90%;
+        top: 12%;
+        left: 20%;
+        width: 80%;
+        opacity: 0.9;
     }
 
     .frontPage .container{
         top : 45%;
-        width: 90%;
+        width: 80%;
     }
 
     .frontPage .boat{
-        width: 70%;
-        bottom: 4rem;
+        width: 60%;
+        bottom: 7rem;
+        left:0;
+        transform: rotate(-10deg);
+    }
+
+    .wheel{
+        top: 16%;
+        width: 30%;
+        left: 12px;
+        opacity: 0.4;
     }
 
     .frontPage .update{
-        padding: 2px 8px;
-        color: var(--BLACK_COLOR);
+        display: none;
     }
 
+
     .frontPage .linkBar{
-        width: 60%;
+        width: 68%;
+        height: auto;
+        right: 0;
+        bottom: 30px;
+    }
+
+    .gmail{
+       letter-spacing: 0;
+       right:16px;
+       font-size: 0.8em;
+       bottom: 50px;
+
     }
 
 }
