@@ -6,7 +6,8 @@ document.addEventListener("readystatechange",(event)=>{
 
 
 const initApp = ()=>{
-    showItems();
+    showItems(false); // Revaling Items while Loading
+    //Autotype
     var typed = new Typed("#autoType",{
         strings:["PraveenSubramaniyam","Coder","Front-End Developer","Programmer"],
         typeSpeed:120,
@@ -25,6 +26,7 @@ const initApp = ()=>{
     var lastScrollTop = 0;
     const navBar = document.querySelector(".header");
 
+    // NavBar Controll using scrolling
     window.addEventListener("scroll",()=>{
         var currentScrollTop = window.scrollY || document.documentElement.currentScrollTop;
 
@@ -36,18 +38,26 @@ const initApp = ()=>{
         lastScrollTop= currentScrollTop;
     });
 
+    //Animation using Scrolling
+
     window.addEventListener("scroll",()=>{
-        if(window.scrollY === 0){
+        const curr = window.scrollY;
+        if(curr === 0){
             showItems();
         }else{
             hideItems();
         }
 
-        console.log(Math.floor(window.scrollY));
+        // if(curr >= 500){
+        //     revealAbout();
+        // }else if(curr < 500){
+        //     hideAbout(false);
+        // }
     })
 
-    const menuIcon = document.querySelector(".showMenu");
 
+    // Showing Mobile Side Bar
+    const menuIcon = document.querySelector(".showMenu");
     menuIcon.addEventListener("click",()=>{
         const status = document.querySelector(".menuItems");
         status.style.top = "0";
@@ -55,6 +65,7 @@ const initApp = ()=>{
         menuIcon.style.display = "none";
     });
 
+    //Hiding Mobile Hide Bar
     const hideMenu = document.querySelector(".hideMenu");
 
     hideMenu.addEventListener("click",()=>{
@@ -63,7 +74,6 @@ const initApp = ()=>{
         status.style.right = "-20rem";
         menuIcon.style.display = "flex";
     });
-
 
 }
 
@@ -85,7 +95,7 @@ const showItems = ()=>{
     showMenuList(menuList)
 }
 
-const hideItems= ()=>{
+const hideItems= (hideLogo)=>{
     const linkBar = document.querySelector(".linkBar");
     const cloud = document.querySelector(".cloud");
     const boat = document.querySelector(".boat");
@@ -96,9 +106,11 @@ const hideItems= ()=>{
     cloud.style.right= "70rem";
     cloud.style.opacity = "0";
     boat.style.left = "0rem";
-    logo.style.opacity = "0";
-    logo.style.letterSpacing = "0";
-    
+
+    if(hideLogo === true){
+        logo.style.opacity = "0";
+        logo.style.letterSpacing = "0";  
+    }
     showMenuList(menuList)
 }
 
@@ -107,9 +119,4 @@ const showMenuList = (menuList) =>{
         menuList[point].style.transform = "rotateX(0deg)";
     }
 }
-
-
-
-
-
 
