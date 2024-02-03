@@ -427,7 +427,7 @@ body{
 .profiles .profileEnvironment{
     height: 70vh;
     width: 100%;  
-    background-image: url("/images/mountain.png");
+    background-image: url("images/mountain.png");
     /* #233825  tree color*/ 
     background-repeat: no-repeat;
     background-position: center;
