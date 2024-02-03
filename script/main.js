@@ -1,3 +1,5 @@
+import changeImage from "./project.js";
+
 document.addEventListener("readystatechange",(event)=>{
     if(event.target.readyState === "complete"){
         initApp();
@@ -74,6 +76,12 @@ const initApp = ()=>{
         status.style.right = "-20rem";
         menuIcon.style.display = "flex";
     });
+
+    const flag = document.querySelector(".project .projectContent .details");
+
+    flag.addEventListener("scroll",(event)=>{
+        changeImage();
+    })
 
 }
 
