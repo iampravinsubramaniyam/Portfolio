@@ -61,6 +61,38 @@ const autoType = ()=>{
 }
 
 
+const revealAbout = ()=>{
+    const myPara = document.getElementById("para");
+    const skillSet = document.querySelectorAll("#mySkills img");
+    const skillSetHeading = document.querySelector("#skillSetHeading");
+    const aboutHeading = document.querySelector("#aboutTitle");
+
+
+    for(let point = 0; point < skillSet.length; ++point){
+        skillSet[point].style.width = "50%";
+    }
+
+    myPara.style.height = "100%";
+    skillSetHeading.style.transform = "rotateX(0deg)";
+    aboutHeading.style.opacity = "1";
+}
+
+const hideAbout =()=>{
+    const myPara = document.getElementById("para");
+    const skillSet = document.querySelectorAll("#mySkills img");
+    const skillSetHeading = document.querySelector("#skillSetHeading");
+    const aboutHeading = document.querySelector("#aboutTitle");
+
+    for(let point = 0; point < skillSet.length; ++point){
+        skillSet[point].style.width = "0%";
+    }
+
+    myPara.style.height = "0%";
+    skillSetHeading.style.transform = "rotateX(90deg)";
+
+    aboutHeading.style.opacity = "0";
+}
+
 export default showItems;
 export {hideItems,showMenuList,autoType};
-
+export {revealAbout,hideAbout};

@@ -1,5 +1,6 @@
 import showItems from "./animate.js";
 import {hideItems} from "./animate.js";
+import {revealAbout,hideAbout} from "./animate.js";
 
 
 var lastScrollTop = 0;
@@ -31,11 +32,13 @@ const animationWhileScroll = ()=>{
             hideItems();
         }
 
-        // if(curr >= 500){
-        //     revealAbout();
-        // }else if(curr < 500){
-        //     hideAbout(false);
-        // }
+        if(curr >= 190 ){
+            revealAbout();
+        }else if(curr < 190 || curr > 1000){
+            hideAbout();
+        }
+
+        console.log(curr);
     })
 }
 

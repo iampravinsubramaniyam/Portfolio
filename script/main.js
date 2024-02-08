@@ -24,5 +24,4 @@ const initApp = ()=>{
     flag.addEventListener("scroll",(event)=>{
         changeImage();
     })
-
 }
