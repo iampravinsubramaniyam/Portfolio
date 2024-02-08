@@ -19,9 +19,5 @@ const initApp = ()=>{
     animationWhileScroll();
     mobileSideBar();
 
-    const flag = document.querySelector(".project .projectContent .details");
 
-    flag.addEventListener("scroll",(event)=>{
-        changeImage();
-    })
 }

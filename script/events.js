@@ -25,6 +25,7 @@ const NavBar=()=>{
     
 const animationWhileScroll = ()=>{
     window.addEventListener("scroll",()=>{
+        
         const curr = window.scrollY;
         if(curr === 0){
             showItems();
@@ -32,9 +33,13 @@ const animationWhileScroll = ()=>{
             hideItems();
         }
 
-        if(curr >= 190 ){
+        if(curr >= 190 && curr < 1000){
             revealAbout();
-        }else if(curr < 190 || curr > 1000){
+        }else if(curr < 190){
+            hideAbout();
+        }
+
+        if(curr >= 1000){
             hideAbout();
         }
 
