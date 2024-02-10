@@ -93,6 +93,8 @@ const hideAbout =()=>{
     aboutHeading.style.opacity = "0";
 }
 
+
+
 export default showItems;
 export {hideItems,showMenuList,autoType};
 export {revealAbout,hideAbout};

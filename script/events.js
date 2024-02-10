@@ -71,5 +71,8 @@ const mobileSideBar = ()=>{
 
 }
 
+
+
 export default NavBar;
 export {animationWhileScroll,mobileSideBar};
+

@@ -70,8 +70,9 @@ body{
     flex-flow: column nowrap;
     background-color: var(--BG_COLOR);
     color: var(--FONT_COLOR);
-    width:100%;
+    width:100vw;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 .header{
@@ -133,15 +134,38 @@ body{
 .header .menuItems li a{
     text-decoration: none;
     display: block;
-    padding: 1rem;   
+    padding:  0.5rem 1rem;   
     color: var(--GREY);
     transition: 1s;
     transform: rotateX(90deg);
+    position: relative;
 }
 
-.header .menuItems li a:hover,.header .menuItems li a:focus{
-    color: var(--LOGO_COLOR);
+.header .menuItems li a::before{
+    content: '';
+    height: 3px;
+    width: 0%;
+    background-color: #8ee6fe;
+    border-radius: 5px;
+    position: absolute;
+    bottom:0%;
+    left:16%;
+    transition: 0.5s ease-in-out;
 }
+
+.header .menuItems li a:hover::before{
+    content: '';
+    height: 3px;
+    width: 70%;
+    background-color: #8ee6fe;
+    border-radius: 5px;
+    position: absolute;
+    bottom:0%;
+    left:16%;
+    transition: 0.5s ease-in-out;
+}
+
+
 
 .showMenu{
     display: none;
@@ -153,11 +177,14 @@ body{
 
 .main .topSection{
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     gap: 0;
+
+    position: relative;
+
 }
 
 .frontPage{
@@ -294,7 +321,7 @@ body{
 
 
 .aboutContainer{
-    background-image: linear-gradient(#78D7F1,white);
+    background-image: linear-gradient(#76D7F1,white);
     width: 100%;
     min-height: 120vh;
     display: flex;
@@ -359,8 +386,7 @@ body{
     letter-spacing: 2px;
     padding: 20px;
     color: rgb(55, 182, 196);
-    font-family: 'Gochi Hand', cursive;
-    font-size: 36px;
+    font-size: 30px;
     letter-spacing: 5px;
     font-weight: 200;
 
@@ -669,20 +695,86 @@ animation-delay: 5s;
 .project{
     height: 100vh;
     width: 100%;
-    background-color: #82cfdc;
-    /* background-image: linear-gradient(#82cfdc,rgb(0, 0, 0)); */
-
-    box-shadow: 1px 2px 20px black;
-    padding: 20px;
+    background-color: #FAFAFA;
+    position: relative;
 }
 
+.project .projectArea{
+    height: 95vh;
+    width: 100vw;
+    background-color: #7DD0DE;
+
+    border: 2px soid black;
+    z-index: 60;
+    box-shadow: 0px 5px 5px rgb(203, 196, 196);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.ProjectTitle ul{
+    /* background-color: pink; */
+    list-style: none;
+    display: flex;
+    gap: 2em;
+    padding: 2em;
+}
+.ProjectTitle ul li{
+    cursor: pointer;
+}
+
+
+.projectContents{
+    /* background-color: red; */
+    display: flex;
+    height: 70vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+}
+
+.projectContents .projectPic{
+    /* background-color: aqua; */
+    width: 50%;
+    height: 100%;
+
+    display: grid;
+    grid-template-rows: 50% 50%;
+    align-items: center;
+    justify-items: center;
+
+    place-content: center;
+}
+
+.projectContents .projectPic .techStack{
+    width: 50%;
+    height: 50%;
+    /* background-color: #865326; */
+}
+
+.projectDetails{
+    width: 50%;
+    height: 100%;
+    /* background-color: #F6F6F7; */
+    overflow-y: scroll;
+
+}
+
+.projectDetails p{
+    padding: 1em 4em 1em 2em;
+    text-align: justify;
+}
 
 /******Footer********/
 
 
 .footer{
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
+    background-image: linear-gradient(#FAFAFA,#F6F6F7);
     background-color: #F6F6F7;
     padding: 40px 20px;
 
@@ -691,11 +783,10 @@ animation-delay: 5s;
     align-items: center;
 
 
-    flex-flow: column wrap;
+    flex-flow: row wrap;
     gap: 30px;
 
     position: relative;
-
 }
 
 .snowMountain{
@@ -723,6 +814,7 @@ animation-delay: 5s;
     justify-content: center;
     padding: 20px;
     transition: 2s;
+    border-radius: 5px;
 }
 
 .contact:hover{
@@ -800,15 +892,17 @@ textarea{
 .footer .foot .follow{
     display:flex;
     gap: 16px;
+    background-color: transparent;
 }
 .footer .foot .follow h4{
-    font-weight: 100;
+    font-weight: 400;
 }
 
 .footer .foot p{
     font-weight: 300;
     color:black;
 }
+
 .footer .foot p span{
     color: #226b77;
 }
@@ -818,8 +912,23 @@ textarea{
 }
 
 .footer .foot .follow img{
-    opacity: 0.6;
     border-radius: 150%;
+    padding: 5px;
+    background-color: transparent;
+    box-shadow: 1px 2px 5px #226b77;
+}
+
+
+.foot .greet .myPic{
+    width: 100px;
+    height: 100px;
+    border-radius: 150%;
+
+    border: 1px double #226b77;
+    box-shadow: 0.5px 1px 4px #226b77;
+    padding: 5px;
+
+    opacity: 0.9;
 }
 
 .greet{
@@ -834,19 +943,22 @@ textarea{
     display: flex;
     align-items: center;
     justify-content: start;
-    padding: 0px 16px;    
+    padding: 16px 16px; 
+    /* color: white; */
+    /* background-color: #226b77; */
+
+    transition: 2s;
+    border-radius: 10px;
+    position: relative;
+
+    margin: 1em;
 }
-
-.foot .greet .myPic{
-    width: 100px;
-    height: 100px;
-    border-radius: 150%;
-
-    border: 1px double #226b77;
-    box-shadow: 0.5px 1px 4px #226b77;
-    padding: 2px;
-
-    opacity: 0.9;
+.greet .greetMessage::before{
+    content: ' Have a Great Day !! ';
+    color: pink;
+    position: absolute;
+    bottom:-10px;
+    left: 5%;
 }
 
 /******** Mobile Screen**********/

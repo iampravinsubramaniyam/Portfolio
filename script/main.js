@@ -18,6 +18,4 @@ const initApp = ()=>{
     autoType();
     animationWhileScroll();
     mobileSideBar();
-
-
 }
