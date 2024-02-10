@@ -20,10 +20,10 @@
 
             <ul class = "menuItems">
                 <li class = "hideMenu"><span class="material-symbols-outlined">close</span></li>
-                <li><a href="">About Me</a></li>
-                <li><a href="">Profiles</a></li>
-                <li><a href="">Projects</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="">ABOUT ME</a></li>
+                <li><a href="">PROFILES</a></li>
+                <li><a href="">PROJECTS</a></li>
+                <li><a href="">CONTACT</a></li>
             </ul>
 
         </nav>
@@ -104,43 +104,46 @@
         <!-- profiles -->
 
         <section class="profiles">
+
             <div class="profileEnvironment">
-                <h1>Profiles</h1>
+                <div class = "profileTitle">
+                    <p></p>
+                    <h1>PROFILES</h1>
+                    <p></p>
+                </div>
+
                 <div class="profileLinks">
                     <div class="one linkWrap">
-                        <img src="images/linkIcons/leetcode.png" alt="" width = "10%">
-                        <a href="">Leetcode</a>
+                        <img src="images/linkIcons/leetcode.png" alt="" width = "10%" height = "auto">
+                        <a href="#">Leetcode</a>
                     </div>
+
                     <div class="two linkWrap">
-                        <img src="images/linkIcons/linkedin.png" alt="" width = "10%">
-                        <a href="">linkedin</a>
+                        <img src="images/linkIcons/linkedin.png" alt="" width = "10%" height = "auto">
+                        <a href="#">linkedin</a>
                     </div>
 
                     <div class="three linkWrap">
-                        <img src="images/linkIcons/codechef.759x1024.png" alt="" width = "10%">
-                        <a href="">Codechef</a>
+                        <img src="images/linkIcons/codechef.759x1024.png" alt="" width = "10%" height = "auto">
+                        <a href="#">Codechef</a>
                     </div>
                     <div class="four linkWrap">
-                        <img src="images/linkIcons/github.png" alt="" width = "10%">
-                        <a href="">Github</a>
+                        <img src="images/linkIcons/github.png" alt="" width = "10%" height = "auto">
+                        <a href="#">Github</a>
                     </div>
                     <div class="five linkWrap">
-                        <img src="images/linkIcons/discord.png" alt="" width = "10%">
-                        <a href="">Discord</a>
+                        <img src="images/linkIcons/discord.png" alt="" width = "10%" height = "auto">
+                        <a href="#">Discord</a>
                     </div>
                     <div class="six linkWrap">
-                        <img src="images/linkIcons/instagram.png" alt="" width = "10%">
-                        <a href="">Instagram</a>
+                        <img src="images/linkIcons/instagram.png" alt="" width = "10%" height = "auto">
+                        <a href="#">Instagram</a>
                     </div>
-                </div>
 
-                <div class="resume">
-                    <div class="mycv">
-                        <a href="" class = "cvButton">Resume <img class = "downloadIcon" src="images/icons/download.png" alt=""></a>
-                    </div>
                 </div>
             </div>
             <img class = "icyMountain" src="images/mountain.png" alt="" width = "100%" height = "auto">
+
         </section>
 
 
@@ -181,15 +184,15 @@
             <div class="contactEnvinonment">
                 <form action="submit" method = "post">
                     <label for="name">Name : </label>
-                    <input type="text" id="name" name = "Name" required>
+                    <input type="text" id="name" name = "Name" placeholder="Name" required>
                     <label for="email">Email : </label>
-                    <input type="text" id = "email"  name = "Email" required>
+                    <input type="text" id = "email"  name = "Email"  placeholder="Email" required>
                     <label for="phone">Mobile No : </label>
-                    <input type="text" id = "phone">
+                    <input type="text" id = "phone"  placeholder="Phone Number" required>
                     <label for="message">Message : </label>
-                    <textarea name="Message" id="message" cols="20" rows="5"></textarea>
-                    <button type = "reset">Reset</button>
-                    <button type = "submit">Submit</button>
+                    <textarea name="Message" id="message" cols="20" rows="5"  placeholder="Enter your message"></textarea>
+                    <button class = "reset" type = "reset">Reset</button>
+                    <button class = "submit" type = "submit">Submit</button>
                 </form>
             </div>
         </section>
@@ -197,7 +200,11 @@
         <div class="foot">
             <div class="greet">
                 <img class = "myPic" src="/images/profiley.jpg" alt="mypic">
-                <div class = "greetMessage">Thank you for visiting my profile.</div>
+
+                <div class = "greetMessage">
+                    Thank you for visiting my profile.
+                    <p class = "footerWish">Have&nbsp;a&nbsp;great&nbsp;day!</p>
+                </div>
             </div>
 
             <p><span>@2024</span> Designed and Developed By <span class = "dark"> PraveenSubramaniyam.</span></p>
@@ -212,5 +219,7 @@
         
         <img  class = "snowMountain" src="images/snowMounain.png" alt="" width = "100%" height = "auto">
     </footer>
+
+    <div class="display"></div>
 </body>
 </html>

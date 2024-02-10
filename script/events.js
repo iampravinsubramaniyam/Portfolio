@@ -1,6 +1,6 @@
 import showItems from "./animate.js";
 import {hideItems} from "./animate.js";
-import {revealAbout,hideAbout} from "./animate.js";
+import {revealAbout,hideAbout,footAnimate,animateProfiles} from "./animate.js";
 
 
 var lastScrollTop = 0;
@@ -27,7 +27,7 @@ const animationWhileScroll = ()=>{
     window.addEventListener("scroll",()=>{
         
         const curr = window.scrollY;
-        if(curr === 0){
+        if(curr <= 550){
             showItems();
         }else{
             hideItems();
@@ -43,8 +43,25 @@ const animationWhileScroll = ()=>{
             hideAbout();
         }
 
-        console.log(curr);
+        if(curr > 900 && curr < 1600){
+            animateProfiles(true);
+        }else{
+            animateProfiles(false);
+        }
+
+        if(curr > 2300){
+            footAnimate(true);
+        }else{
+            footAnimate(false);
+        }
+
+        throughDisplay(Math.floor(curr));
     })
+}
+
+const throughDisplay = (curr)=>{
+    const display = document.querySelector(".display");
+    display.textContent = curr;
 }
 
     // Showing Mobile Side Bar
