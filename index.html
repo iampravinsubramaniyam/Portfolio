@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="icon" href="images/favicon/favicon-32x32.png">
+    <title>Home | Praveen.fl</title>
+    <link rel="icon" href="images/favicon/android-chrome-512x512.png">
     <link rel = "stylesheet" href = "css/style.css">
     <script defer src="https://kit.fontawesome.com/e0c5254d51.js" crossorigin="anonymous"></script>
     <script type = "module" src = "script/main.js"></script>
@@ -20,10 +20,10 @@
 
             <ul class = "menuItems">
                 <li class = "hideMenu"><span class="material-symbols-outlined">close</span></li>
-                <li><a href="">ABOUT ME</a></li>
-                <li><a href="">PROFILES</a></li>
-                <li><a href="">PROJECTS</a></li>
-                <li><a href="">CONTACT</a></li>
+                <li><a href="#about">ABOUT ME</a></li>
+                <li><a href="#profiles">PROFILES</a></li>
+                <li><a href="#projects">PROJECTS</a></li>
+                <li><a href="#contact">CONTACT</a></li>
             </ul>
 
         </nav>
@@ -32,7 +32,7 @@
     <main class = "main">
         <!-- Top Page -->
         <div class = "topSection">
-            <section class="frontPage">
+            <section class="frontPage" id = "home">
                 <img class = "cloud" src="images/clouds.png" alt="clouds" width="80%" height="auto">
                 <img class = "boat" src="images/boat.png" alt="boat" width = "80%" height="auto">
                 <img class = "wheel" src="images/wheel.png" alt="weel" width = "10%" height = "auto">
@@ -52,8 +52,8 @@
 
         <!-- about -->
         
-        <section class="aboutContainer">
-            <img class = "snow" src="images/about/snowflake.png" alt="Background - snowflake" width = "100%" height = "auto">
+        <section class="aboutContainer" id = "about">
+
             <img class = "glacierWall" src="images/about/wall.png" alt="gracier wall" width="100%">
     
             <div class="about">
@@ -97,22 +97,19 @@
                     <img src="images/about/flake.png"  alt="flake" width = "45%" height = "auto">
                     <img src="images/about/bubble.png" alt="bubble" width = "20%" height = "auto">
                 </div>
-    
+
             </div>
         </section>
 
+          
+
         <!-- profiles -->
 
-        <section class="profiles">
+        <section class="profiles" id = "profiles">
 
             <div class="profileEnvironment">
-                <div class = "profileTitle">
-                    <p></p>
-                    <h1>PROFILES</h1>
-                    <p></p>
-                </div>
 
-                <div class="profileLinks">
+                <div class="myProfiles">
                     <div class="one linkWrap">
                         <img src="images/linkIcons/leetcode.png" alt="" width = "10%" height = "auto">
                         <a href="#">Leetcode</a>
@@ -139,9 +136,17 @@
                         <img src="images/linkIcons/instagram.png" alt="" width = "10%" height = "auto">
                         <a href="#">Instagram</a>
                     </div>
+                </div>
+                <div class="title">
+                    <div class="titleWraper">
+                        <h1>PROFILES</h1>
+                        <a href="" class = "cvButton" download="">Proposal</a>
+                    </div>
 
                 </div>
+
             </div>
+            <img  class = "kite" src="./images/kite.png" alt="" width = "10%">
             <img class = "icyMountain" src="images/mountain.png" alt="" width = "100%" height = "auto">
 
         </section>
@@ -149,77 +154,71 @@
 
         <!-- Projects -->
 
-        <section class="project">
-            <div class="projectArea">
+        <section class="project" id = "projects">
+            <div class="projectTitles">
                 <h1>PROJECTS</h1>
+                <div class="projectTitle agro">Agrocart</div>
+                <div class="projectTitle blog">Bloging Website</div>
 
-                <div class="ProjectTitle">
-                    <ul>
-                        <li>Agrocart</li>
-                        <li>Malware Analysis</li>
-                    </ul>
+            </div>
+
+            <div class="card">
+
+                <div class="heading">
+
+                    <div class="projectLogo">
+                        <img src="" alt="">
+                    </div>
+                    <h3></h3>
+
                 </div>
 
-                <div class="projectContents">
-                    <div class="projectPic">
-                        <img src="/images/project/agroCart/1.PNG" alt="" width = "50%">
-                        <div class="techStack">
-                            <h2>tech Stack</h2>
-                        </div>
+
+                <div class="discription">
+                </div>
+
+                <div class="techStack">
+                    <h3>Tech Stack:</h3>
+                    <div class="techImages">
+
                     </div>
 
-                    <div class="projectDetails">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, tempore ex excepturi magnam vitae tempora maxime eum, eaque placeat reprehenderit aliquid blanditiis voluptates nihil et quis, aspernatur quo earum numquam possimus libero assumenda cumque. Sapiente sunt, necessitatibus, perspiciatis nobis iste aut, quis vero nam veritatis soluta ab. Reiciendis repudiandae cupiditate iste sequi optio deleniti illum doloremque nostrum earum, deserunt quod accusantium aperiam eveniet ut illo velit? Esse ullam nostrum eos qui aliquam natus praesentium? Vero ex, assumenda sit minus quod accusamus, similique quasi officiis sapiente animi excepturi reprehenderit explicabo veniam ad omnis. Ducimus fugit corporis ullam qui, perferendis at corrupti.</p>
+                    <div class="techImagesTwo">
+
                     </div>
                 </div>
             </div>
+
+
         </section>
 
     </main>
 
-    <footer class = "footer">
+    <!-------------Footer-->
 
-        <section class="contact">
-            <h1>CONTACT ME</h1>
-            <div class="contactEnvinonment">
-                <form action="submit" method = "post">
-                    <label for="name">Name : </label>
-                    <input type="text" id="name" name = "Name" placeholder="Name" required>
-                    <label for="email">Email : </label>
-                    <input type="text" id = "email"  name = "Email"  placeholder="Email" required>
-                    <label for="phone">Mobile No : </label>
-                    <input type="text" id = "phone"  placeholder="Phone Number" required>
-                    <label for="message">Message : </label>
-                    <textarea name="Message" id="message" cols="20" rows="5"  placeholder="Enter your message"></textarea>
-                    <button class = "reset" type = "reset">Reset</button>
-                    <button class = "submit" type = "submit">Submit</button>
-                </form>
-            </div>
-        </section>
+    <footer class = "footer" id = "contact">          
+        <div class="follow">
 
-        <div class="foot">
-            <div class="greet">
-                <img class = "myPic" src="/images/profiley.jpg" alt="mypic">
-
-                <div class = "greetMessage">
-                    Thank you for visiting my profile.
-                    <p class = "footerWish">Have&nbsp;a&nbsp;great&nbsp;day!</p>
-                </div>
-            </div>
-
-            <p><span>@2024</span> Designed and Developed By <span class = "dark"> PraveenSubramaniyam.</span></p>
-
-            <div class="follow">
-                <h4>Follow me @</h4>
-                <a href=""><img src="images/linkIcons/instagram.png" alt="instagram icon" width = "100%" height = "auto"></a>
+            <div class="contactLinks">
+                <h4>Contact me @</h4>
+                <a href=""><img src="./images/linkIcons/whatsapp.png" alt="whatsapp icon" width = "100%" height = "auto"></a>
+                <a href="mailto:pravinsubramaniyam@gmail.com"><img src="./images/linkIcons/mail.png" alt="mail icon" width = "100%" height = "auto"></a>
                 <a href=""><img src="images/linkIcons/linkedin.png" alt="Linkedin icon" width = "100%" height = "auto"></a>
+                <a href=""><img src="images/linkIcons/instagram.png" alt="instagram icon" width = "100%" height = "auto"></a>
             </div>
-            
         </div>
-        
-        <img  class = "snowMountain" src="images/snowMounain.png" alt="" width = "100%" height = "auto">
+        <div class="endBanner">
+            <p>@2024 Designed and Developed By <span>PraveenSubramaniyam.</span></p>
+        </div>
     </footer>
 
     <div class="display"></div>
+
+    <div class="sideBar">
+        <a href="#home"><img src="./images/sideBar/home.png" alt="" width = "100%"></a>
+        <a href="#about"><img src="./images/sideBar/about.png" alt="" width = "100%"></a>
+        <a href="#profiles"><img src="./images/sideBar/profiles.png" alt="" width = "100%"></a>
+        <a href="#projects"><img src="./images/sideBar/projects.png" alt="" width = "100%"></a>
+    </div>
 </body>
 </html>

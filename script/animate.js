@@ -1,3 +1,5 @@
+import {createImage} from "./project.js";
+
 const showItems = ()=>{
     const linkBar = document.querySelector(".linkBar");
     const cloud = document.querySelector(".cloud");
@@ -94,120 +96,134 @@ const hideAbout =()=>{
 }
 
 
-// footer animation
+// profile section
 
-const footAnimate = (isTrue)=>{
-    const wishMessage = document.querySelector(".footerWish");
-    const links = document.querySelectorAll(".footer .foot .follow img");
-    const myName = document.querySelectorAll(".footer .foot p span");
-    const contactForm = document.querySelector(".contact");
-    const myPic = document.querySelector(".foot .greet .myPic");
+const revealProfiles = ()=>{
+    const profiles = document.querySelector(".myProfiles");
+    const title = document.querySelector(".titleWraper");
 
-    if(isTrue){
-        //setting transitions
+    profiles.style.left = "5%";
+    title.style.top = "5vh";
 
-        wishMessage.style.transition  = "5s linear"
-        contactForm.style.transition = "3s linear";
-        myPic.style.transition = "2s linear";
+}
+
+const hideProfiles = () =>{
+    const profiles = document.querySelector(".myProfiles");
+    const title = document.querySelector(".titleWraper");
+    profiles.style.left = "-70%";
+    title.style.top = "50vh";
+}
 
 
-        for(let point = 0; point < links.length; ++point){
-            links[point].style.transition = "3s";
+const blogProject = () =>{
+    const title = document.querySelector(".heading h3");
+    const logo = document.querySelector(".projectLogo img");
+    const discription = document.querySelector(".discription");
+
+    title.textContent = `Bloging${'\xa0'.repeat(1)}Website`;
+    logo.src = "./images/project/Blog/blog.png";
+    discription.textContent = "It is an online blogging platform where individuals or groups share their thoughts, experiences, expertise, and opinions on various topics through regular posts or articles. These posts can cover a wide range of subjects, including personal stories, hobbies, interests, news, reviews, tutorials, and much more.";
+    
+    document.querySelector(".techImages").style.display = "none";
+
+    document.querySelector(".techImagesTwo").style.display = "flex";
+
+    document.querySelector(".blog").style.backgroundColor = "rgba(0, 0, 0, 0.175)";
+
+    document.querySelector(".agro").style.backgroundColor = "transparent";
+    
+    setTimeout(()=>{
+        revealTechSkills();
+    },50);
+    
+    hideAgro();    
+
+}
+
+
+const agroProject = ()=>{
+    const title = document.querySelector(".heading h3");
+    const logo = document.querySelector(".projectLogo img");
+    const discription = document.querySelector(".discription");
+    const techImages = document.querySelector(".techImages");
+
+    title.textContent = "Agrocart";
+    discription.textContent = "It's a website-based farming project.The primary goal of this project is to provide an interface between farmers and buyers";
+    logo.src = "./images/project/agroCart/cart.png";
+    techImages.style.display = "flex";
+
+    document.querySelector(".techImagesTwo").style.display = "none";
+
+    const blogTitle = document.querySelector(".blog");
+
+    blogTitle.style.backgroundColor = "transparent";
+
+    const agroTitle = document.querySelector(".agro");
+    agroTitle.style.backgroundColor = "rgba(0, 0, 0, 0.175)";
+
+    setTimeout(()=>{
+        hideTechSkills();
+    },0);
+
+    setTimeout(()=>{
+        revealAgro();
+    },0);
+
+}
+
+var revealed = false;
+const revealTechSkills =()=>{
+    const images = document.querySelectorAll(".techImagesTwo img");
+
+    if(revealed === false){
+        for(let point = 0; point < images.length; point++){
+            images[point].style.top = "30px";
         }
-
-        for(let point = 0; point < myName.length; ++point){
-            myName[point].style.transition = "2s linear";
-        }
-
-        //modifi
-
-        wishMessage.style.width = "100%";
-        
-        for(let point= 0; point < links.length; ++point){
-            links[point].style.boxShadow = "1px 2px 5px #226b77";
-        }
-
-        for(let point = 0; point < myName.length; ++point){
-            myName[point].style.color = "#226b77";
-        }
-
-        contactForm.style.opacity = "1";
-
-        myPic.style.boxShadow = "0.5px 1px 4px #226b77";
-        
-    }else{
-        //removing transitions
-        wishMessage.style.transition  = "0s";
-        contactForm.style.transition = "1s";
-        myPic.style.transition = "0s";
-
-
-        for(let point = 0; point < links.length; ++point){
-            links[point].style.transition = "0s";
-        }
-
-        for(let point = 0; point < myName.length; ++point){
-            myName[point].style.transition = "0s";
-        }
-
-
-        //modifie
-        wishMessage.style.width = "0%";
-
-        for(let point= 0; point < links.length; ++point){
-            links[point].style.boxShadow = "";
-        }
-
-        for(let point = 0; point < myName.length; ++point){
-            myName[point].style.color = "black";
-        }
-
-        contactForm.style.opacity = "0";
-
-        myPic.style.boxShadow = "";
-    }    
+        revealed = true;
+    }
     
 }
 
-// profile section
+const hideTechSkills = () =>{
+    const images = document.querySelectorAll(".techImagesTwo img");
 
-const animateProfiles = (show)=>{
-    const line = document.querySelectorAll(".profileTitle p");
-    const profiles = document.querySelectorAll(".linkWrap");
-
-    if(show){
-        for(let point = 0; point < line.length; ++point){
-            line[point].style.transition = "5s";
+    if(revealed === true){
+        for(let point = 0; point < images.length; point++){
+            images[point].style.top = "-300px";
         }
+        revealed = false;
+    }
+}
 
-        for(let point = 0; point < line.length; ++point){
-            line[point].style.width = "100%";
+var agroTechHided = false;
+
+const hideAgro = () =>{
+    const images = document.querySelectorAll(".techImages img");
+    
+    if(agroTechHided === false){
+        for(let point = 0; point < images.length; ++point){
+            images[point].style.bottom = "-300px";
         }
-
-        for(let point = 0; point < profiles.length; ++point){
-            profiles[point].querySelector("a").style.width ="90px";
-            profiles[point].querySelector("img").style.boxShadow = "1px 2px 5px #226b77";
-        }
-
-
-    }else{
-        for(let point = 0; point < line.length; ++point){
-            line[point].style.transition = "0s";
-        }
-       
-        for(let point = 0; point < line.length; ++point){
-            line[point].style.width = "0%";
-        }
-
-        for(let point = 0; point < profiles.length; ++point){
-            profiles[point].querySelector("a").style.width ="0px";
-            profiles[point].querySelector("img").style.boxShadow = "";
-        }
-
+        agroTechHided = true;
     }
 }
 
 
+const revealAgro = () =>{
+    const images = document.querySelectorAll(".techImages img");
+    
+    if(agroTechHided === true){
+        for(let point = 0; point < images.length; ++point){
+            images[point].style.bottom = "30%";
+        }
+        agroTechHided = false;
+    }
+
+    // const title = document.querySelector(".heading h3");
+    // title.style.width = "50%";
+}
+
 export default showItems;
 export {hideItems,showMenuList,autoType};
-export {revealAbout,hideAbout,footAnimate,animateProfiles};
+export {revealAbout,hideAbout,revealProfiles,hideProfiles};
+export {blogProject,agroProject};
