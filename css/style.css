@@ -1186,8 +1186,6 @@ animation-delay: 5s;
         height: 90px;
     }
 
-
-
     .navBar .logo{
         opacity: 1;
     }
@@ -1199,11 +1197,11 @@ animation-delay: 5s;
      .sea{
         width: 100%;
         bottom: 0px;
-        height: 100px;
+        height: 150px;
     }
 
     .main .topSection{
-        height: 90vh;
+        height: 100vh;
     }
 
     .main .topSection .cloud{
@@ -1243,13 +1241,13 @@ animation-delay: 5s;
 
     .linkBar{
         left: 30%;
-        top:95%;
+        top:92%;
         opacity: 0.3;
     }
 
     .gmail{
         left: 43%;
-        top:95%;
+        top:92%;
         font-size: 6px;
     }
 
