@@ -50,14 +50,14 @@ const animationWhileScroll = ()=>{
         // }
 
 
-        throughDisplay(Math.floor(curr));
+        // throughDisplay(Math.floor(curr));
     })
 }
 
-const throughDisplay = (curr)=>{
-    const display = document.querySelector(".display");
-    display.textContent = curr;
-}
+// const throughDisplay = (curr)=>{
+//     const display = document.querySelector(".display");
+//     display.textContent = curr;
+// }
 
     // Showing Mobile Side Bar
 
@@ -65,9 +65,9 @@ const mobileSideBar = ()=>{
     const menuIcon = document.querySelector(".showMenu");
 
     menuIcon.addEventListener("click",()=>{
-        const status = document.querySelector(".menuItems");
-        status.style.top = "0";
-        status.style.right = "0";
+        const navItems = document.querySelector(".menuItems");
+        navItems.style.top = "0";
+        navItems.style.right = "0";
         menuIcon.style.display = "none";
     });
 
@@ -75,9 +75,10 @@ const mobileSideBar = ()=>{
     const hideMenu = document.querySelector(".hideMenu");
 
     hideMenu.addEventListener("click",()=>{
-        const status = document.querySelector(".menuItems");
-        status.style.top = "-20rem";
-        status.style.right = "-20rem";
+        const navItems = document.querySelector(".menuItems");
+        navItems.style.top = "-20rem";
+        navItems.style.right = "-20rem";
+
         menuIcon.style.display = "flex";
     });
 

@@ -122,7 +122,7 @@ const blogProject = () =>{
 
     title.textContent = `Bloging${'\xa0'.repeat(1)}Website`;
     logo.src = "./images/project/Blog/blog.png";
-    discription.textContent = "It is an online blogging platform where individuals or groups share their thoughts, experiences, expertise, and opinions on various topics through regular posts or articles. These posts can cover a wide range of subjects, including personal stories, hobbies, interests, news, reviews, tutorials, and much more.";
+    discription.textContent = "It is an online blogging platform where individuals share their thoughts, experiences, expertise, and opinions on various topics through regular posts or articles. These posts can cover a wide range of subjects, including personal stories, hobbies, interests, news, reviews, tutorials, and much more.";
     
     document.querySelector(".techImages").style.display = "none";
 
