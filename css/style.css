@@ -171,6 +171,7 @@ body{
     gap: 0;
 
     position: relative;
+    overflow-x: hidden;
 }
 
 .frontPage{
@@ -1185,10 +1186,7 @@ animation-delay: 5s;
         height: 90px;
     }
 
-    .main .topSection .frontPage{
-        margin-bottom: 0px;
-        overflow:hidden;
-    }
+
 
     .navBar .logo{
         opacity: 1;
@@ -1206,9 +1204,18 @@ animation-delay: 5s;
 
     .main .topSection .cloud{
         top: 20%;
-        left:20%;
+        left:-100%;
         width: 70%;
         opacity: 0.9;
+        animation: float 20s linear infinite;
+    }
+
+    @keyframes float {
+        from{
+            left:100%;
+        }to{
+            left: -100%;
+        }
     }
 
     .frontPage .container{
