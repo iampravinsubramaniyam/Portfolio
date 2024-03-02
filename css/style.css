@@ -1202,6 +1202,10 @@ animation-delay: 5s;
         height: 100px;
     }
 
+    .main .topSection{
+        height: 90vh;
+    }
+
     .main .topSection .cloud{
         top: 20%;
         left:-100%;
