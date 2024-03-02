@@ -179,7 +179,7 @@ body{
     height: 100vh;
 }
 
-.main .topSection .cloud{
+.cloud{
     width: 30%;
     position: absolute;
     right: 20rem;
@@ -187,7 +187,7 @@ body{
     transition: 4s;
 }
 
-.main .topSection .boat{
+.boat{
     width: 20%;
     opacity: 0.5;
     position: absolute;
@@ -215,16 +215,7 @@ body{
     }
 }
 
-.linkBar{
-    width: 30%;
-    height: 40px;
-    position: absolute;
-    bottom: 0;
-    right: 100rem;
-    z-index: 3;
-    opacity: 0.5;
-    transition: 2s;
-}
+
 
 .sea{
     width: 100%;
@@ -287,6 +278,27 @@ body{
     opacity: 0.6;
     font-size: 16px;
     letter-spacing: 0.5px;
+}
+
+.mail{
+    height: 10vh;
+    width: 100%;
+    background-color: #76D7F1;
+    position: relative;
+}
+
+.linkBar{
+    width: 30%;
+    position: absolute;
+    bottom: 0;
+    right:0;
+}
+
+.gmail{
+    position: absolute;
+    right:48px;
+    bottom:24px;
+    font-size: 0.8em;
 }
 
 
@@ -1156,7 +1168,7 @@ animation-delay: 5s;
         letter-spacing: 0.2rem;
     }
 
-    .main .topSection .cloud{
+    .cloud{
         bottom: 0;
         left: 0;
         width: 60%;
@@ -1203,7 +1215,7 @@ animation-delay: 5s;
         height: 90vh;
     }
 
-    .main .topSection .cloud{
+    .cloud{
         top: 20%;
         left:-100%;
         width: 70%;
@@ -1219,29 +1231,29 @@ animation-delay: 5s;
         }
     }
 
-    .frontPage .container{
+    .container{
         top : 50%;
         width: 80%;
     }
 
-    .main .topSection .boat{
+   .boat{
         width: 50%;
-        bottom: 70px;
-        left:10px;
+        bottom: 100px;
+        left: 100px;
 
-        animation: swing 5s linear infinite;
+        animation: swing 10s linear infinite;
     }
 
     @keyframes swing{
         0%{
-            transform: rotate(0deg);
-            left: 10px;
+            transform: rotate(10deg);
+            left: 100px;
         }50%{
             transform: rotate(-10deg);
-            left: 12px;
+            left: 105px;
         }100%{
-            transform: rotate(0deg);
-            left: 10px;
+            transform: rotate(10deg);
+            left: 100px;
         }
     }
 
@@ -1252,37 +1264,25 @@ animation-delay: 5s;
         opacity: 0.4;
     }
 
-    .linkBar{
-        left: 30%;
-        top:92%;
-        opacity: 0.3;
-    }
-
-    .gmail{
-        left: 43%;
-        top:92%;
-        font-size: 6px;
-    }
 
     .frontPage .update{
         display: none;
     }
 
-
-    .frontPage .linkBar{
-        width: 68%;
-        height: auto;
-        right: 0;
-        bottom: 30px;
+    .linkBar{
+        left:0;
+        bottom:10px;
     }
 
     .gmail{
-       letter-spacing: 0;
-       right:16px;
-       font-size: 0.8em;
-       bottom: 50px;
-
+        font-size: 9px;
+        left: 40px;
+        bottom: 22px;
     }
+
+
+
+    /**********About **************/
 
     .aboutContainer{
         flex-direction: column;

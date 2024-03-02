@@ -14,7 +14,6 @@ document.addEventListener("readystatechange",(event)=>{
 
 
 const initApp = ()=>{
- // Revaling Items while Loading
     NavBar();
     autoType();
     mobileSideBar();
