@@ -171,7 +171,6 @@ body{
     gap: 0;
 
     position: relative;
-
 }
 
 .frontPage{
@@ -217,7 +216,7 @@ body{
 
 .linkBar{
     width: 30%;
-    height: auto;
+    height: 40px;
     position: absolute;
     bottom: 0;
     right: 100rem;
@@ -1191,33 +1190,37 @@ animation-delay: 5s;
         overflow:hidden;
     }
 
+    .navBar .logo{
+        opacity: 1;
+    }
+
     .header .navBar .showMenu{
         opacity: 0.8;
     }
 
-    .frontPage .sea{
+     .sea{
         width: 100%;
-        bottom: 60px;
-        height: 120px;
+        bottom: 0px;
+        height: 100px;
     }
 
-    .frontPage .cloud{
-        top: 12%;
-        left: 20%;
-        width: 80%;
+    .main .topSection .cloud{
+        top: 20%;
+        left:20%;
+        width: 70%;
         opacity: 0.9;
     }
 
     .frontPage .container{
-        top : 45%;
+        top : 55%;
         width: 80%;
     }
 
-    .frontPage .boat{
-        width: 60%;
-        bottom: 7rem;
+    .main .topSection .boat{
+        width: 50%;
+        bottom: 42px;
         left:0;
-        transform: rotate(-10deg);
+        transform: rotate(-15deg);
     }
 
     .wheel{
@@ -1225,6 +1228,18 @@ animation-delay: 5s;
         width: 30%;
         left: 12px;
         opacity: 0.4;
+    }
+
+    .linkBar{
+        left: 30%;
+        top:95%;
+        opacity: 0.3;
+    }
+
+    .gmail{
+        left: 43%;
+        top:95%;
+        font-size: 6px;
     }
 
     .frontPage .update{

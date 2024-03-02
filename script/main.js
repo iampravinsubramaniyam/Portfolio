@@ -14,15 +14,19 @@ document.addEventListener("readystatechange",(event)=>{
 
 
 const initApp = ()=>{
-    showItems(false); // Revaling Items while Loading
+ // Revaling Items while Loading
     NavBar();
     autoType();
-    animationWhileScroll();
     mobileSideBar();
     createProject();
     projectEvent();
     changeStyles();
 
     const width = screen.width;
-    console.log(width);
+    if(width <= 400){
+
+    }else{
+        showItems(false);
+        animationWhileScroll();
+    }
 }
