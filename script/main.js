@@ -22,4 +22,7 @@ const initApp = ()=>{
     createProject();
     projectEvent();
     changeStyles();
+
+    const width = screen.width;
+    console.log(width);
 }
