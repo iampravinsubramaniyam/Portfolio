@@ -585,6 +585,10 @@ animation-delay: 5s;
     position: relative;
 }
 
+.profiles h1{
+    display: none;
+}
+
 .profiles .icyMountain{
     position: absolute;
     bottom: 0;
