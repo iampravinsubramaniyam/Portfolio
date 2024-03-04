@@ -1193,26 +1193,292 @@ animation-delay: 5s;
     }
 
     .container{
-        top: 40%;
+        top: 50%;
         left: 10%;
         min-width: 70%;
         height: 100px;
     }
 
-    .main .topSection .boat{
-        width: 50%;
-        bottom: 3rem;
-        left: 0rem;
+    .container h1{
+        font-size: 1.5rem;
+        letter-spacing: 2px;
     }
 
-    .linkBar{
+    .boat{
         width: 50%;
+        bottom: 30px;
+        left: 100px;
+
+        animation: swing 10s linear infinite;
     }
+
+    @keyframes swing{
+        0%{
+            transform: rotate(10deg);
+            left: 100px;
+        }50%{
+            transform: rotate(-10deg);
+            left: 105px;
+        }100%{
+            transform: rotate(10deg);
+            left: 100px;
+        }
+    }
+
+
+    .cloud{
+        top: 20%;
+        left:-100%;
+        width: 70%;
+        opacity: 0.9;
+        animation: float 20s linear infinite;
+    }
+
+    @keyframes float {
+        from{
+            left:100%;
+        }to{
+            left: -100%;
+        }
+    }
+
+    .frontPage .update{
+        display: none;
+    }
+    .wheel{
+        top: 16%;
+        width: 30%;
+        left: 12px;
+        opacity: 0.4;
+    }
+
+
+    .linkBar{
+        top:0;
+        right:10px;
+        width: 15em;
+    }
+
+    .gmail{
+        font-size: 10px;
+        right:12px;
+        top: 0px;
+    }
+
+    /***** about  **/
+
+    .content p{
+        width: 100%;
+        background-color: #76D7F1;
+    }
+    .aboutContainer{
+        flex-direction: column;
+        padding: 0px;
+    }
+
+    .about{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 20px;
+    }
+
+    .content .aboutHeading{
+        transform: rotate(0deg);
+        width: 300px;
+
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top:0px;
+        font-weight: 500;
+    }
+
+    #skillSetHeading{
+        margin: 20px;
+        font-size: 1.5rem;
+        transform: rotate(0deg);
+    }
+
+    .tech{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+        padding-left: 20px;
+    }
+
+    .tech h3{
+        padding: 6px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /********profiles */
+
+    .profiles{
+        min-height: 50vh;
+        flex-direction: column;
+        padding-top: 50px;      
+    }
+
+    .profiles h1{
+        width: 100%;
+        text-align: center;
+        padding: 24px;
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+    }
+
+    .profileEnvironment{
+        height: 60vh;
+        display: flex;
+        flex-direction:column ;
+        padding:0;
+        justify-content: space-around;
+        transition: 5s;
+    }
+
+    .myProfiles{
+        position: relative;
+        flex-direction: column;
+        width: 100%;
+        height: 40vh;
+        left:-1000px;
+        transition: 2s;
+    }
+
+    .title{
+        width: 100%;
+        height: 10vh;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .titleWraper{
+        position: static;
+        width: 100%;
+        height: 20vh;
+    }
+    .titleWraper h1{
+        display: none;
+    }
+
+
+    /********Projects */
+
+    .project{
+        flex-direction: column;
+        gap: 0rem;
+        min-height: 50vh;
+    }
+
+    .projectTitles{
+        width: 100%;
+        height: 20vh;
+    }
+
+    .projectTitles h1{
+        font-size: 1.2rem;
+    }
+
+    .card{
+        height: 50vh;
+        width: 100%;
+        gap: 0;
+        padding: 0px 20px;
+        justify-content: space-evenly;
+    }
+
+    .titleWrapper{
+        flex-direction: row;
+        height: 80px;
+        gap: 12px;
+    }
+
+    .heading{
+        height: 20vh;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+        gap:2rem;
+    }
+
+    .heading img{
+        width: 80px;
+    }
+
+    .heading h3{
+        width: 100%;
+        text-align: center;
+    }
+
+
+    .projectLogo{
+        width: 90px;
+        height: 60px;
+    }
+
+    .techStack{
+        justify-content: center;
+        height: 10vh;
+    }
+
+    .techImages{
+        width: 60%;
+    }
+
+
+    /*********Footer*****/
+
+
+    .footer{
+        height: 25vh;
+    }
+
+    .sideBar{
+        width: 100px;
+        height: 6vh;
+        padding: 10px;
+        gap: 4px;
+    }
+
+    .sideBar a{
+        width: 20px;
+    }
+    .contactLinks{
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contactLinkWrapper{
+        width: 50%;
+        height: 10vh;
+        /* background-color: red; */
+        display: flex;
+        align-items: center;
+        justify-content: space-around;   
+    }
+
+    .endBanner{
+        height: 5vh;
+    }
+    
 }
 
 @media screen  and (max-width: 400px) {
-
-
 
     .header{
         height: 90px;
@@ -1259,7 +1525,7 @@ animation-delay: 5s;
 
    .boat{
         width: 50%;
-        bottom: 100px;
+        bottom: 80px;
         left: 100px;
 
         animation: swing 10s linear infinite;
@@ -1335,14 +1601,12 @@ animation-delay: 5s;
         font-weight: 500;
     }
 
-    .content p{
-        width: 100%;
-        padding: 20px;
-    }
+
 
     #skillSetHeading{
         margin: 20px;
         font-size: 1.5rem;
+        transform: rotate(0deg);
     }
 
     .tech{
@@ -1385,12 +1649,6 @@ animation-delay: 5s;
         justify-content: space-around;
     }
 
-    .myProfiles{
-        position: static;
-        flex-direction: column;
-        width: 100%;
-        height: 40vh;
-    }
 
     .title{
         width: 100%;

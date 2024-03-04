@@ -34,23 +34,6 @@ const animationWhileScroll = ()=>{
         }else{
             hideItems();
         }
-
-        // if(curr >= 190 && curr < 1200){
-        // }else if(curr < 190){
-        // }
-
-        // if(curr >= 1200){
-        //     hideAbout();
-        // }
-
-        // if(curr >= 1000){
-        // }
-        
-        // if(curr <= 200 || curr >= 2000){
-        // }
-
-
-        // throughDisplay(Math.floor(curr));
     })
 }
 
