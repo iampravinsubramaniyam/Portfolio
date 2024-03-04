@@ -54,35 +54,6 @@ const animationWhileScroll = ()=>{
     })
 }
 
-// const throughDisplay = (curr)=>{
-//     const display = document.querySelector(".display");
-//     display.textContent = curr;
-// }
-
-    // Showing Mobile Side Bar
-
-const mobileSideBar = ()=>{
-    const menuIcon = document.querySelector(".showMenu");
-
-    menuIcon.addEventListener("click",()=>{
-        const navItems = document.querySelector(".menuItems");
-        navItems.style.top = "0";
-        navItems.style.right = "0";
-        menuIcon.style.display = "none";
-    });
-
-    //Hiding Mobile Hide Bar
-    const hideMenu = document.querySelector(".hideMenu");
-
-    hideMenu.addEventListener("click",()=>{
-        const navItems = document.querySelector(".menuItems");
-        navItems.style.top = "-20rem";
-        navItems.style.right = "-20rem";
-
-        menuIcon.style.display = "flex";
-    });
-
-}
 
 const projectEvent = ()=>{
     const blog = document.querySelector(".blog");
@@ -168,5 +139,5 @@ const changeStyles = () =>{
 
 
 export default NavBar;
-export {animationWhileScroll,mobileSideBar,projectEvent,changeStyles};
+export {animationWhileScroll,projectEvent,changeStyles};
 

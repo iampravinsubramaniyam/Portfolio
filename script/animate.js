@@ -34,7 +34,7 @@ const hideItems= (hideLogo)=>{
         logo.style.opacity = "0";
         logo.style.letterSpacing = "0";  
     }
-    showMenuList(menuList)
+    showMenuList(menuList);
 }
 
 
