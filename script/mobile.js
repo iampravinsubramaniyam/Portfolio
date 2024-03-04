@@ -1,12 +1,12 @@
 
 const  throughDisplay= ()=>{
-    const display = document.querySelector(".display");
-    window.addEventListener("scroll",()=>{
+    // const display = document.querySelector(".display");
+    // window.addEventListener("scroll",()=>{
         
-        const curr = window.scrollY;
-        display.textContent = Math.floor(curr);
+    //     const curr = window.scrollY;
+    //     display.textContent = Math.floor(curr);
         
-    })
+    // })
 }
 const mobileSideBar = () =>{
     const showMenuIcon = document.querySelector("#menuShow");
