@@ -37,14 +37,19 @@ const initApp = ()=>{
 
     setTimeout(()=>{
         endLoading();
-    },3000)
+    },3000);
 
 }
 
 const endLoading = () =>{
     const body = document.querySelector("body");
-    const LoadingPage = document.querySelector(".loading");
+    const loadingPage = document.querySelector(".loading");
 
-    LoadingPage.style.display = "none";
+    loadingPage.style.backgroundColor = "transparent";
     body.style.overflowY = "visible";
+    document.querySelector(".loading h1").style.display = "none";
+
+    setTimeout(()=>{
+        loadingPage.style.display = "none";
+    },2000)
 }
