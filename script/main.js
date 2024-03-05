@@ -35,4 +35,16 @@ const initApp = ()=>{
         changeStyles();
     }
 
+    setTimeout(()=>{
+        endLoading();
+    },3000)
+
+}
+
+const endLoading = () =>{
+    const body = document.querySelector("body");
+    const LoadingPage = document.querySelector(".loading");
+
+    LoadingPage.style.display = "none";
+    body.style.overflowY = "visible";
 }
