@@ -46,6 +46,12 @@ const revealItems = () =>{
             hideTechStack();
         }
 
+        if(curr >= 600){
+            navColorChange("rgb(14, 140, 157)");
+        }else{
+            navColorChange("#58C5E8");
+        }
+
         if(curr >= 1550){
             revealProfiles();
         }else if(curr <= 1250){
@@ -115,7 +121,7 @@ const revealProfiles = () =>{
 const hideProfiles = () =>{
     if(!profileStatus){
         const profiles = document.querySelector(".myProfiles");
-        profiles.style.left = "-1000px";
+        profiles.style.left = "-600px";
 
         profileStatus = true;
     }
@@ -144,6 +150,13 @@ const hideProjectTech = () =>{
         projectTech = true;
     }
 }
+
+const navColorChange = (color) =>{
+    const logo = document.querySelector(".logo");
+    logo.style.color = color;
+    document.querySelector(".logoFirstLetter").style.color = color;
+};
+
 
 export default mobileSideBar;
 
