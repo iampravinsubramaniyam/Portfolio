@@ -37,7 +37,7 @@ const initApp = ()=>{
 
     setTimeout(()=>{
         endLoading();
-    },3000);
+    },1000);
 
 }
 
@@ -51,5 +51,5 @@ const endLoading = () =>{
 
     setTimeout(()=>{
         loadingPage.style.display = "none";
-    },2000)
+    },2000);
 }

@@ -120,7 +120,7 @@ const blogProject = () =>{
     const logo = document.querySelector(".projectLogo img");
     const discription = document.querySelector(".discription");
 
-    title.textContent = `Bloging${'\xa0'.repeat(1)}Website`;
+    title.textContent = `Bloging${'\xa0'.repeat(1)}Site`;
     logo.src = "./images/project/Blog/blog.png";
     discription.textContent = "It is an online blogging platform where individuals share their thoughts, experiences, expertise, and opinions on various topics through regular posts or articles. These posts can cover a wide range of subjects, including personal stories, hobbies, interests, news, reviews, tutorials, and much more.";
     
@@ -177,7 +177,11 @@ const revealTechSkills =()=>{
 
     if(revealed === false){
         for(let point = 0; point < images.length; point++){
-            images[point].style.top = "30px";
+            if(screen.width <= 576){
+                images[point].style.top = "20px";
+            }else{
+                 images[point].style.top = "30px";
+            }
         }
         revealed = true;
     }

@@ -1,7 +1,6 @@
 
 //agroculture
 const createProject = () =>{
-
     const title = document.querySelector(".card .heading h3");
     title.style.fontSize = "1.5rem";
     title.style.letterSpacing = "2px";
@@ -36,7 +35,11 @@ const createProject = () =>{
 
 const createImage = (tech) =>{
     const img = document.createElement("img");
-    img.style.width = "40px";
+    if(screen.width <= 576){
+        img.style.width = "30px";
+    }else{
+        img.style.width = "40px";
+    }
     img.src = `./images/project/agroCart/Tech Stack/${tech}.png`
     img.style.opacity = "0.9";
 

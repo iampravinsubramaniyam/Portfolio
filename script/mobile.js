@@ -52,12 +52,11 @@ const revealItems = () =>{
             hideProfiles();
         }
 
-        if(curr >= 2400){
+        if(curr >= 2000){
             revealProjectTech();
-        }else{
+        }else if (curr <= 1000){
             hideProjectTech();
         }
-        
     })
 }
 
@@ -124,7 +123,7 @@ const hideProfiles = () =>{
 
 var projectTech = true;
 
-const revealProjectTech = () =>{
+const revealProjectTech = (width) =>{
     const images = document.querySelectorAll(".techImages img");
     
     if(projectTech){

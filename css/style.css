@@ -1342,11 +1342,12 @@ body{
     }
 
     .profiles h1{
+        display: inline;
         width: 100%;
         text-align: center;
         padding: 24px;
         font-size: 1.2rem;
-        letter-spacing: 2px;
+        letter-spacing: 4px;
     }
 
     .profileEnvironment{
@@ -1387,6 +1388,7 @@ body{
     /********Projects */
 
     .project{
+        min-height: 50vh;
         flex-direction: column;
         gap: 0rem;
         min-height: 50vh;
@@ -1406,7 +1408,8 @@ body{
         width: 100%;
         gap: 0;
         padding: 0px 20px;
-        justify-content: space-evenly;
+        justify-content: space-around;
+        margin-bottom: 1em;
     }
 
     .titleWrapper{
@@ -1416,15 +1419,14 @@ body{
     }
 
     .heading{
-        height: 20vh;
+        height: 80px;
+        padding: 0px 40px;
         justify-content: center;
-        align-items: center;
-        flex-direction: column-reverse;
-        gap:2rem;
+        align-items: center;        
     }
 
     .heading img{
-        width: 80px;
+        width: 50px;
     }
 
     .heading h3{
@@ -1443,8 +1445,16 @@ body{
         height: 10vh;
     }
 
+    .techStack h3{
+        width: 40%;
+    }
+
     .techImages{
         width: 60%;
+    }
+
+    .techImagesTwo{
+        margin-left: 1rem;
     }
 
 
@@ -1487,7 +1497,7 @@ body{
     
 }
 
-@media screen  and (max-width: 400px) {
+@media screen  and (max-width: 400px){
 
     .header{
         height: 90px;
@@ -1647,7 +1657,6 @@ body{
         text-align: center;
         padding: 24px;
         font-size: 1.2rem;
-        letter-spacing: 2px;
     }
 
     .profileEnvironment{
@@ -1673,58 +1682,6 @@ body{
     }
     .titleWraper h1{
         display: none;
-    }
-
-
-
-    /********Projects */
-
-    .project{
-        flex-direction: column;
-        gap: 0rem;
-        min-height: 50vh;
-    }
-
-    .projectTitles{
-        width: 100%;
-        height: 20vh;
-    }
-
-    .projectTitles h1{
-        font-size: 1.2rem;
-    }
-
-    .card{
-        height: 50vh;
-        width: 100%;
-        gap: 0;
-        padding: 0px 20px;
-        justify-content: space-evenly;
-    }
-
-    .titleWrapper{
-        flex-direction: row;
-        height: 80px;
-        gap: 12px;
-    }
-
-    .heading{
-        height: 10vh;
-    }
-
-
-    .projectLogo{
-        width: 90px;
-        height: 60px;
-    }
-
-    .techStack{
-        justify-content: center;
-        height: 10vh;
-    }
-
-    .techImages{
-        width: 60%;
     }
 
 
@@ -1765,4 +1722,10 @@ body{
         height: 5vh;
     }
     
+}
+
+@media screen  and (max-width: 375px){
+    .container h1{
+        font-size: 1rem;
+    }
 }
