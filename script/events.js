@@ -7,7 +7,7 @@ import {animateTechImages} from "./project.js";
 var old;
 window.addEventListener("blur",()=>{
     old = document.title;
-    document.title = "Hey click me 🐼";
+    document.title = "hey click me 🙃";
 });
 
 window.addEventListener("focus",()=>{
