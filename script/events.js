@@ -15,7 +15,7 @@ const NavBar=()=>{
         var currentScrollTop = window.scrollY || document.documentElement.currentScrollTop;
 
         if(currentScrollTop > lastScrollTop){
-            navBar.style.top = "-70px";
+            navBar.style.top = "-100px";
         }else{
             navBar.style.top = "0";
         }
@@ -59,6 +59,7 @@ const about = () =>{
     revealAbout();
     const logo = document.querySelector(".logo");
     logo.style.color = "rgb(14, 140, 157)";
+    logo.style.opacity = "0.7";
     document.querySelector(".logoFirstLetter").style.color = "rgb(14, 140, 157)";
     document.title = "About | Praveen.FL";
     const sidebar = document.querySelector(".sideBar");
@@ -67,6 +68,8 @@ const about = () =>{
 
 
 const profiles = () =>{
+    const logo = document.querySelector(".logo");
+    logo.style.opacity = "0.8";
     document.title = "Profiles | Praveen.FL";
     revealProfiles();
     const sidebar = document.querySelector(".sideBar");
