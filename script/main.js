@@ -1,8 +1,8 @@
-import createProject from "./project.js";
+import agroProject from "./project.js";
 import showItems from "./animate.js";
 import {autoType} from "./animate.js";
 import NavBar from "./events.js";
-import {animationWhileScroll,projectEvent,changeStyles} from "./events.js";
+import {animationWhileScroll,changeStyles} from "./events.js";
 import mobileSideBar from "./mobile.js";
 import {throughDisplay,revealItems} from "./mobile.js";
 
@@ -19,8 +19,7 @@ const initApp = ()=>{
     NavBar();
     autoType();
     
-    createProject();
-    projectEvent();
+    agroProject();
     showItems(false);
 
 
@@ -39,6 +38,7 @@ const initApp = ()=>{
         endLoading();
     },1000);
 
+    throughDisplay();
 }
 
 const endLoading = () =>{

@@ -1,12 +1,13 @@
+import { revealProject,hideProject,Contact } from "./events.js";
 
 const  throughDisplay= ()=>{
-    // const display = document.querySelector(".display");
-    // window.addEventListener("scroll",()=>{
+    const display = document.querySelector(".display");
+    window.addEventListener("scroll",()=>{
         
-    //     const curr = window.scrollY;
-    //     display.textContent = Math.floor(curr);
+        const curr = window.scrollY;
+        display.textContent = Math.floor(curr);
         
-    // })
+    })
 }
 const mobileSideBar = () =>{
     const showMenuIcon = document.querySelector("#menuShow");
@@ -32,18 +33,37 @@ const mobileSideBar = () =>{
 
 }
 
+
+const skills = (condition) =>{
+    const skillSet = document.querySelectorAll("#mySkills img");
+
+    for(let point = 0; point < skillSet.length; ++point){
+        condition?skillSet[point].style.width = "50%":skillSet[point].style.width = "0%";
+    }
+}
+
+
+const profiles = (condition) =>{
+    const profiles = document.querySelector(".myProfiles");
+    const title = document.querySelector(".titleWraper");
+
+    condition?profiles.style.left = "0%":profiles.style.left = "-100%";
+    condition?title.style.top = "5vh":title.style.top = "70vh"
+}
+
+
+
+
+
 const revealItems = () =>{
     window.addEventListener("scroll",()=>{
         
         const curr = window.scrollY;
         if(curr >= 500 && curr < 2000){ // about
-            if(curr >=900){
-                revealTechStack();
-            }
             revealMobileAbout();
         }else{
             hideMobileAbout();
-            hideTechStack();
+      
         }
 
         if(curr >= 600){
@@ -52,17 +72,31 @@ const revealItems = () =>{
             navColorChange("#58C5E8");
         }
 
-        if(curr >= 1550){
-            revealProfiles();
-        }else if(curr <= 1250){
-            hideProfiles();
+        if(curr >= 800){
+            skills(true);
+        }else{
+            skills(false);
         }
 
-        if(curr >= 2000){
-            revealProjectTech();
-        }else if (curr <= 1000){
-            hideProjectTech();
+        if(curr >= 1400){
+            profiles(true);
+        }else if(curr <= 500){
+            profiles(false);
         }
+
+        if(curr >= 1600){
+            revealProject();
+        }else if (curr <= 1000){
+            hideProject();
+        }
+
+        if(curr >= 1900){
+            Contact(true);
+        }else{
+            Contact(false);
+        }
+
+
     })
 }
 
@@ -72,7 +106,6 @@ const revealMobileAbout = () =>{
         const myPara = document.getElementById("para");
         myPara.style.backgroundColor = "transparent";
         aboutStatus = false;
-        
     }
 }
 
@@ -84,72 +117,6 @@ const hideMobileAbout = ()=>{
     }
 }
 
-var techStackStatus = true;
-const revealTechStack = () =>{
-    if(techStackStatus){
-        const skillSet = document.querySelectorAll("#mySkills img");
-
-        for(let point = 0; point < skillSet.length; ++point){
-            skillSet[point].style.width = "50%";
-        }
-        techStackStatus = false;
-    }
-}
-
-const hideTechStack  = () =>{
-    if(!techStackStatus){
-        const skillSet = document.querySelectorAll("#mySkills img");
-
-        for(let point = 0; point < skillSet.length; ++point){
-            skillSet[point].style.width = "0%";
-        }
-        techStackStatus = true;
-    }
-}
-
-var profileStatus = true;
-const revealProfiles = () =>{
-    if(profileStatus){
-        const profiles = document.querySelector(".myProfiles");
-        profiles.style.left = "0";
-
-        profileStatus = false;
-    }
-
-}
-
-const hideProfiles = () =>{
-    if(!profileStatus){
-        const profiles = document.querySelector(".myProfiles");
-        profiles.style.left = "-600px";
-
-        profileStatus = true;
-    }
-}
-
-var projectTech = true;
-
-const revealProjectTech = (width) =>{
-    const images = document.querySelectorAll(".techImages img");
-    
-    if(projectTech){
-        for(let point = 0; point < images.length; ++point){
-            images[point].style.bottom = "30%";
-        }
-        projectTech = false;
-    }
-}
-
-const hideProjectTech = () =>{
-    const images = document.querySelectorAll(".techImages img");
-    
-    if(!projectTech){
-        for(let point = 0; point < images.length; ++point){
-            images[point].style.bottom = "-300px";
-        }
-        projectTech = true;
-    }
-}
 
 const navColorChange = (color) =>{
     const logo = document.querySelector(".logo");
