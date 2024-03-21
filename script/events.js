@@ -4,6 +4,17 @@ import {revealAbout,hideAbout,revealProfiles,hideProfiles} from "./animate.js";
 import {animateTechImages} from "./project.js";
 
 
+var old;
+window.addEventListener("blur",()=>{
+    old = document.title;
+    document.title = "Hey click me 🐼";
+});
+
+window.addEventListener("focus",()=>{
+    document.title = old;
+});
+
+
 
 var lastScrollTop = 0;
 const navBar = document.querySelector(".header");
