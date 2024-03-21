@@ -162,6 +162,7 @@ body{
 
     position: relative;
     overflow-x: hidden;
+    background-color: red;
 }
 
 .frontPage{
