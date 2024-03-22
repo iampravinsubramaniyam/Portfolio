@@ -133,6 +133,38 @@ const Contact = (condition) =>{
     }
 }
 
+const resume = (condition) =>{
+    const msg = document.querySelector(".downloadMsg");
+
+    condition?msg.style.width = "180px":msg.style.width = "0%";
+    condition?msg.style.padding = "12px":msg.style.padding = "0px";
+}
+
+var resumeCondition = false;
+
+if(screen.width > 992){
+    const cvButton = document.querySelector(".resumeContainer a");
+
+    cvButton.addEventListener("mouseover",()=>{
+        resume(true);
+        document.querySelector(".resumeContainer a").style.opacity = "1";
+        document.querySelector(".resumeContainer p").style.opacity = "1";
+        document.querySelector(".resumeContainer p").style.letterSpacing = "2px";
+        // document.querySelector(".downloadMsg").textContent = "Download";
+    })
+
+    cvButton.addEventListener("mouseout",()=>{
+        resume(false);
+        document.querySelector(".resumeContainer a").style.opacity = "0.8";
+        document.querySelector(".resumeContainer p").style.opacity = "0.7";
+        document.querySelector(".resumeContainer p").style.letterSpacing = "0px";
+        // document.querySelector(".downloadMsg").textContent = "Click\xa0me\xa0to\xa0download";
+    })
+}else{
+    resumeCondition = true;
+}
+
+
 const changeStyles = () =>{
     window.addEventListener("scroll",()=>{
         const curr = window.scrollY;
@@ -144,6 +176,12 @@ const changeStyles = () =>{
         }
         if(curr >= 1000){
             profiles();
+        }
+
+        if(curr >= 700 && resumeCondition){
+            resume(true);
+        }else if (curr && resumeCondition){
+            resume(false);
         }
 
         if(curr > 2090){

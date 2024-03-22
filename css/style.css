@@ -560,6 +560,78 @@ animation-delay: 5s;
 }
 
 
+.myResume{
+    /* background-color: red; */
+    width: 300px;
+    height: 60px;
+    position: absolute;
+    right:12%;
+    bottom:20%;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 6px;
+}
+
+.resumeContainer{
+    width: 80px;
+    height: 80px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: zoom 4s linear infinite;
+    /* background-color: red; */
+}
+
+.resumeContainer a{
+    width: 100%;
+    top:0;
+    left:0;
+    opacity: 0.8;
+    position: absolute;
+    transition: 1s;
+}
+
+@keyframes zoom{
+    0%{
+        width: 80px;
+        height: 80px;
+    }50%{
+        width: 60px;
+        height: 60px;
+    }100%{
+        width: 80px;
+        height: 80px;
+    }
+}
+
+.resumeContainer a img{
+    width:100%;
+}
+
+.resumeContainer p{
+    opacity: 0.7;
+    z-index: -1;
+}
+
+.downloadMsg{
+    font-size: 0.6em;
+    background-color: rgba(255, 255, 255, 0.217);
+    border-radius: 50px;
+    box-shadow: 1px 1px 5px white;
+    width: 0px;
+    padding:0px;
+    overflow: hidden;
+    transition: 2s;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
 
 /**************  Profiles**************/
 
@@ -1177,6 +1249,10 @@ body{
         grid-auto-rows: 25vh;
     }
 
+    .myResume{
+        right: 6%;
+    }
+
     .profiles{
         padding-top:0;
     }
@@ -1197,6 +1273,17 @@ body{
     .content p{
         padding: 20px;
         line-height: 30px;
+    }
+
+    .myResume{
+        right: 2%;
+    }
+
+    .resumeContainer a{
+        opacity: 1;
+    }
+    .resumeContainer p{
+        opacity: 1;
     }
 
     .profiles{
@@ -1272,6 +1359,11 @@ body{
     .content p{
         width: 50vw;
         line-height: 25px;
+    }
+
+    .myResume{
+        right: 0%;
+        bottom: 8%;
     }
 
 
@@ -1361,6 +1453,7 @@ body{
         position: absolute;
         left: 15%;
         top: 25%;
+
     }
 
     .hideMenuIcon span{
@@ -1537,6 +1630,19 @@ body{
         background-color: red;
     }
 
+    .myResume{
+        width: 150px;
+        left: 70%;
+        /* background-color: lawngreen; */
+        bottom: 4%;
+    }
+
+    .downloadMsg{
+        display: none;
+    }
+
+
+
     /********profiles */
 
     .profiles{
@@ -1712,6 +1818,15 @@ body{
         padding: 20px;
     }
 
+    .myResume{
+        bottom: 4%;
+        left: 65%;
+    }
+
+    .resumeContainer a{
+        border-radius: 150%;
+        padding:0;
+    }
 
     /********profiles */
 
