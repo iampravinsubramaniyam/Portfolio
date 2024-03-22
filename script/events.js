@@ -149,7 +149,6 @@ if(screen.width > 992){
         resume(true);
         document.querySelector(".resumeContainer a").style.opacity = "1";
         document.querySelector(".resumeContainer p").style.opacity = "1";
-        document.querySelector(".resumeContainer p").style.letterSpacing = "2px";
         // document.querySelector(".downloadMsg").textContent = "Download";
     })
 
@@ -157,7 +156,6 @@ if(screen.width > 992){
         resume(false);
         document.querySelector(".resumeContainer a").style.opacity = "0.8";
         document.querySelector(".resumeContainer p").style.opacity = "0.7";
-        document.querySelector(".resumeContainer p").style.letterSpacing = "0px";
         // document.querySelector(".downloadMsg").textContent = "Click\xa0me\xa0to\xa0download";
     })
 }else{
