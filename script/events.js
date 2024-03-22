@@ -115,6 +115,7 @@ var contact = true;
 
 const Contact = (condition) =>{
     if(contact && condition){
+        document.querySelector(".backHome").style.left = "-35px";
         const links = document.querySelectorAll(".contactLinkWrapper a");
 
         for(let index = 0; index < links.length; ++index){
@@ -123,6 +124,7 @@ const Contact = (condition) =>{
 
         contact = false;
     }else if(!condition){
+        document.querySelector(".backHome").style.left = "-75px";
         const links = document.querySelectorAll(".contactLinkWrapper a");
 
         for(let index = 0; index < links.length; ++index){

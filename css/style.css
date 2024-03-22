@@ -136,6 +136,7 @@ body{
 
 }
 
+
 .header .menuItems li a:hover{
     color: rgb(14, 140, 157);
     font-weight: 400;
@@ -1244,6 +1245,10 @@ body{
 }
 
 
+.backHome{
+    display: none;
+}
+
 @media screen and (max-width: 1200px){
     .tech{
         grid-auto-rows: 25vh;
@@ -1764,6 +1769,33 @@ body{
         height: 40vh;
     }
 
+    .backHome{
+        height: 50px;
+        width: 80px;
+        position: absolute;
+        display: flex;
+        background-color: rgba(255, 255, 255, 0.607);
+        border-radius: 50px;
+        align-items: center;
+        justify-content: end;
+        padding: 0px 12px;
+        left:-75px; /*-35  */
+        bottom: 25%;
+
+        transition: 1s;
+    }
+
+    .backHome a{
+        display: flex;
+        align-items: center;
+        justify-content: center;     
+        border-radius: 50px;
+        z-index: 20;  
+    }
+
+    .backHome a img{
+        width: 30px;
+    }
     
 }
 
@@ -1883,6 +1915,16 @@ body{
 
     .endBanner{
         height: 5vh;
+    }
+
+    .backHome{
+        height: 40px;
+        width: 75px;
+        bottom: 30%;
+    }
+
+    .backHome a img{
+        width: 25px;
     }
     
 }
