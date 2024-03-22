@@ -1605,6 +1605,8 @@ body{
         justify-content: center;
         padding-top:0px;
         font-weight: 500;
+        color: #1193AB;
+        opacity: 1;
     }
 
     #skillSetHeading{
@@ -1631,8 +1633,72 @@ body{
         justify-content: center;
     }
 
-    .bubble{
-        background-color: red;
+    .bubbles{
+        background-color: transparent;
+        bottom:0%;
+        position: absolute;
+        z-index: -1;
+        height: 10%;
+    }
+
+    .bubbles img{
+        position: absolute;
+        animation: flow 12s linear infinite;
+    }
+
+    .bubbles img:nth-child(1){
+        left: 10%;
+        transition-delay: 0.2s;
+    }
+    
+    .bubbles img:nth-child(2){
+        left: 20%;
+        transition-delay: 0.5s;
+    }
+    .bubbles img:nth-child(3){
+        left: 30;
+        transition-delay: 0.1s;
+    }
+    .bubbles img:nth-child(4){
+        left: 40%;
+        transition-delay: 0.7s;
+    }
+    .bubbles img:nth-child(5){
+        left: 50%;
+        width: 10px;
+        transition-delay: 0.4s;
+    }
+    .bubbles img:nth-child(6){
+        left: 60%;
+        transition-delay: 0.1s;
+    }
+    .bubbles img:nth-child(7){
+        left: 70%;
+        transition-delay: 0.5s;
+    }
+    .bubbles img:nth-child(8){
+        left: 80%;
+        transition-delay: 0.8s;
+    }
+    .bubbles img:nth-child(9){
+        left: 70%;
+        transition-delay: 0.1s;
+    }
+    .bubbles img:nth-child(10){
+        left: 80%;
+        transition-delay: 0.6s;
+    }
+
+    @keyframes flow {
+        0%{
+            bottom: 0%;
+        }50%{
+            opacity: 0.5;
+        }100%{
+            bottom: 1000px;
+            opacity: 0;
+        }
+        
     }
 
     .myResume{
