@@ -1492,7 +1492,7 @@ body{
         transform: rotateX(0deg);
 
         color: var(--BLACK_COLOR);
-        font-size: 1em;
+        font-size: 0.8em;
         letter-spacing: 2px;
     }
 
