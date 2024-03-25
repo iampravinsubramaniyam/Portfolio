@@ -38,7 +38,15 @@ const skills = (condition) =>{
     const skillSet = document.querySelectorAll("#mySkills img");
 
     for(let point = 0; point < skillSet.length; ++point){
-        condition?skillSet[point].style.width = "50%":skillSet[point].style.width = "0%";
+        if(condition){
+            if(screen.width <= 375){
+                skillSet[point].style.width = "65%";
+            }else{
+                skillSet[point].style.width = "50%"
+            }
+        }else{
+            skillSet[point].style.width = "0%";
+        }
     }
 }
 
@@ -46,9 +54,19 @@ const skills = (condition) =>{
 const profiles = (condition) =>{
     const profiles = document.querySelector(".myProfiles");
     const title = document.querySelector(".titleWraper");
+    if(condition){
+        if(screen.width <= 375){
+            profiles.style.left = "2%";
+            title.style.top = "5vh"
+        }else{
+            profiles.style.left = "0%";
+            title.style.top = "5vh"
+        }
+    }else{
+        profiles.style.left = "-100%";
+        title.style.top = "70vh";
+    }
 
-    condition?profiles.style.left = "0%":profiles.style.left = "-100%";
-    condition?title.style.top = "5vh":title.style.top = "70vh"
 }
 
 

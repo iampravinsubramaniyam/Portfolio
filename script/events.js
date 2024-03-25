@@ -93,7 +93,9 @@ const revealProject = () =>{
     const backImage = document.querySelector(".mask .designImage");
     backImage.style.opacity = "1";
     animateTechImages(true);
-    if(screen.width <= 992){
+    if(screen.width <= 375){
+        document.querySelector(".project .mask .projectHeading h1").style.left = "-60px";
+    }else if(screen.width <= 992){
         document.querySelector(".project .mask .projectHeading h1").style.left = "-40px";
     }else{
         document.querySelector(".project .mask .projectHeading h1").style.left = "-60px";
