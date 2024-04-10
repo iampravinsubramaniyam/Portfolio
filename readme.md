@@ -1,4 +1,4 @@
-// This portfolio website is Devoloping by Pravinsubramaniyam
+// This portfolio website is Devoloped by Pravinsubramaniyam
 
 Tech Stack: HTML,CSS and Javascript..
 
