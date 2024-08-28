@@ -434,9 +434,9 @@ body{
 .tech .skillSet .skillList{
     display: grid;
     list-style: none;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 32px;
-    padding: 20px;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+    padding: 20px 20px 20px 40px;
 }
 
 .tech .skillSet .skillList img{
